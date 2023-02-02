@@ -14,6 +14,7 @@ const App: FC<PropsWithChildren> = ({ children }) => {
 
 	Taro.onPageNotFound((options) => {
 		console.log('on page not found', options);
+
 		Taro.redirectTo({
 			url: URL['404']
 		});
