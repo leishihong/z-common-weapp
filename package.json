@@ -124,6 +124,11 @@
     "typescript": "^3.7.0",
     "webpack": "^5.74.0"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "lint-staged": {
     "src/**/*.{css,scss}": [
       "stylelint --fix --cache"
