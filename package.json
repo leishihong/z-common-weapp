@@ -105,7 +105,6 @@
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.12.0",
     "eslint-config-taro": "3.6.0",
@@ -126,7 +125,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
     }
   },
   "lint-staged": {

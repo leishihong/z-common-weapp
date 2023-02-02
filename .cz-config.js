@@ -19,6 +19,17 @@ module.exports = {
     { value: '📦‍ build', name: '📦‍build:    打包' }
     // { value: 'wip', name: 'wip:    正在进行的工作' }
   ],
+  // scope 类型（定义之后，可通过上下键选择）
+  scopes: [
+    { name: 'api' },
+    { name: 'components' },
+    { name: 'hooks' },
+    { name: 'views' },
+    { name: 'router' },
+    { name: 'store' },
+    { name: 'styles' },
+    { name: 'utils' }
+  ],
   // override the messages, defaults are as follows
   messages: {
     type: '请确保你的提交遵循了原子提交规范！\n请选择提交类型:',

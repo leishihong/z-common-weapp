@@ -9,6 +9,7 @@ import './app.scss';
 
 const App: FC<PropsWithChildren> = ({ children }) => {
   useDidShow(() => {
+    console.log(232323);
     handleUpdate();
   });
   Taro.onPageNotFound((options) => {
