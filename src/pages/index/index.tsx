@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Cell } from '@nutui/nutui-react-taro';
 import cx from './index.module.scss';
 

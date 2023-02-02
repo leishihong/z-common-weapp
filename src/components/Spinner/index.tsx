@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import React, { FC, memo } from 'react';
 import { View } from '@tarojs/components';
 
 import cx from './index.module.scss';

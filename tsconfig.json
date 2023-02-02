@@ -15,14 +15,12 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "paths":{
-      "src/*":["./src/*"],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "src/*": ["./src/*"],
       "api/*": ["./src/api/*"],
       "components/*": ["./src/components/*"],
       "assets/*": ["./src/assets/*"],
@@ -30,8 +28,8 @@
       "hooks/*": ["./src/hooks/*"],
       "store/*": ["./src/store/*"],
       "libs/*": ["./src/libs/*"],
-      "pages/*":["./src/pages/*"],
-      "views/*":["./src/views/*"],
+      "pages/*": ["./src/pages/*"],
+      "views/*": ["./src/views/*"],
       "styles/*": ["./src/styles/*"],
       "constants/*": ["./src/constants/*"]
     }

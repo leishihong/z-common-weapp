@@ -124,58 +124,6 @@
     "typescript": "^3.7.0",
     "webpack": "^5.74.0"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "type-enum": [
-        2,
-        "always",
-        [
-          "feat",
-          "fix",
-          "style",
-          "chore",
-          "typings",
-          "docs",
-          "refactor",
-          "test"
-        ]
-      ]
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog",
-      "types": {
-        "feat": {
-          "description": "新功能（feature）"
-        },
-        "fix": {
-          "description": "修补bug"
-        },
-        "style": {
-          "description": "格式（不影响代码运行的变动）"
-        },
-        "chore": {
-          "description": "构建过程或辅助工具的变动"
-        },
-        "typings": {
-          "description": "Typescript 类型错误"
-        },
-        "docs": {
-          "description": "文档（documentation）"
-        },
-        "refactor": {
-          "description": "重构（既不是新增功能，也不是修改bug的代码变动）"
-        },
-        "test": {
-          "description": "增加或修改测试用例"
-        }
-      }
-    }
-  },
   "lint-staged": {
     "src/**/*.{css,scss}": [
       "stylelint --fix --cache"

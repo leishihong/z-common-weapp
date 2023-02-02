@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import Taro, { useDidShow } from '@tarojs/taro';
 import { Provider } from 'react-redux';
 
