@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "z-common-weapp",
+  "description": "小程序模版",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
