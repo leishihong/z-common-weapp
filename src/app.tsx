@@ -11,7 +11,6 @@ const App: FC<PropsWithChildren> = ({ children }) => {
   useDidShow(() => {
     handleUpdate();
   });
-
   Taro.onPageNotFound((options) => {
     console.log('on page not found', options);
     Taro.redirectTo({
