@@ -1,4 +1,4 @@
-import { FC, memo, useCallback, useEffect, useState, useMemo, useRef } from 'react';
+import React, { FC, memo, useCallback, useEffect, useState, useMemo, useRef } from 'react';
 import { View, Image, MovableArea, MovableView, Block } from '@tarojs/components';
 import Taro, { useDidShow } from '@tarojs/taro';
 import cls from 'classnames';

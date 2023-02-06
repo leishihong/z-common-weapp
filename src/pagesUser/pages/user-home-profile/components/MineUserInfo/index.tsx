@@ -1,4 +1,4 @@
-import { FC, memo, useCallback, useMemo, useState, useEffect } from 'react';
+import React, { FC, memo, useCallback, useMemo, useState, useEffect } from 'react';
 import { View, Block, Image, ScrollView } from '@tarojs/components';
 import Taro, { useRouter } from '@tarojs/taro';
 import cls from 'classnames';
@@ -7,7 +7,6 @@ import { isEmpty, map, compact } from 'lodash';
 import { Avatar } from 'components/index';
 
 import { URL, formatWebUrl } from 'constants/router';
-import { realAgeFunc } from 'utils/index';
 import { jumpWebview } from 'utils/utils';
 
 import IconDefaultAvatar from 'assets/icon-default-avatar.png';
@@ -16,10 +15,7 @@ import IconArrowRight from '../../assets/icon-arrow-right.png';
 import IconNoPhoto from '../../assets/icon-no-photo.png';
 import cx from './index.module.scss';
 
-interface IProps {}
-
-const MineUserInfo: FC<IProps> = (props) => {
-  const {} = props;
+const MineUserInfo: FC = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { userHomeProfileState, globalsState } = useSelector(({ globalsState, userHomeProfileState }) => ({
@@ -105,12 +101,7 @@ const MineUserInfo: FC<IProps> = (props) => {
 
   const renderUserTag = useMemo(() => {
     const sexInfo = { 1: '男', 2: '女', 0: '未知', 3: '保密' };
-    const userinfo = compact([
-      sexInfo[sex],
-      birthday ? `${realAgeFunc(birthday)}岁` : '',
-      constellation,
-      characterType
-    ]);
+    const userinfo = compact([sexInfo[sex], constellation, characterType]);
     if (!isEmpty(userinfo)) {
       return userinfo.join(' | ');
     }
