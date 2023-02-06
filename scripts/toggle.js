@@ -10,10 +10,10 @@ const param = process.argv[2] || 'weapp-prod';
 
 // 小程序环境的APPID配置
 const WEAPPS = {
-  'weapp-dev': 'wxf4f7593d935313af',
-  'weapp-sandbox': 'wxf4f7593d935313af',
-  'weapp-staging': 'wxf4f7593d935313af',
-  'weapp-prod': 'wx9d806e54553f5344'
+  'weapp-dev': '',
+  'weapp-sandbox': '',
+  'weapp-staging': '',
+  'weapp-prod': ''
 };
 
 // 获取当前小程序配置

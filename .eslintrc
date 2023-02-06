@@ -5,8 +5,20 @@
     "react/react-in-jsx-scope": "off",
     "prefer-const": "warn",
     "no-unused-vars": "off",
-    "import/no-commonjs":"off",
-    "@typescript-eslint/no-unused-vars": ["off"]
+    "import/no-commonjs": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "react-hooks/exhaustive-deps": ["off"],
+    "react/display-name": "off",
+    // 方法前是否要一个空格 always: 总是要
+    "space-before-function-paren": [0, "never"],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-empty": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["off"]
     // "no-unused-vars": 0,
     // "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }]
   }

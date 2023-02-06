@@ -1,0 +1,99 @@
+.code-login {
+  padding-top: 58px;
+  padding-left: 60px;
+  padding-right: 60px;
+  min-height: 100vh;
+  background: #ffffff;
+  &-title {
+    font-size: 56px;
+    font-family: PingFang SC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    padding-bottom: 58px;
+  }
+  &-form {
+    width: 630px;
+    padding-bottom: 20px;
+  }
+  .login-wrap {
+    display: block;
+    padding: 16px;
+    padding-left: 24px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #efefef;
+    &-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      .login-input {
+        flex: 1;
+        margin-right: 22px;
+        font-size: 34px;
+        font-family: PingFang SC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #1c1c1e;
+        text-shadow: 0px 0px 0px #333333;
+        line-height: 40px;
+      }
+      .input-placeholder {
+        font-size: 34px;
+        font-family: PingFang SC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #d5d5d5;
+        text-shadow: none;
+        -webkit-text-fill-color: initial;
+        line-height: 40px;
+      }
+      .login-right {
+        display: flex;
+        align-items: center;
+        .login-phone-clear {
+          margin-right: 44px;
+        }
+        .login-code-clear {
+          margin-right: 60px;
+        }
+        .login-code-btn {
+          background: #f2f3f7;
+          border-radius: 8px;
+          padding: 8px 10px;
+          font-size: 30px;
+          font-family: PingFang SC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #333333;
+          line-height: 35px;
+          &.code-disabled {
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+
+  .code-login-btn {
+    width: 630px;
+    height: 88px;
+    background: #1c1c1e;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    &::after {
+      display: none;
+    }
+    &.login-btn-disabled {
+      background: #f2f3f7;
+      color: #999999;
+    }
+  }
+  .protocol-text {
+    color: #999999;
+  }
+  .protocol-user {
+    color: #333333;
+  }
+}

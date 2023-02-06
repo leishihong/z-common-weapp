@@ -30,6 +30,7 @@
       "libs/*": ["./src/libs/*"],
       "pages/*": ["./src/pages/*"],
       "views/*": ["./src/views/*"],
+      "tabBar/*": ["./src/tabBar/*"],
       "styles/*": ["./src/styles/*"],
       "constants/*": ["./src/constants/*"]
     }

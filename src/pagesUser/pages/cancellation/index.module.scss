@@ -1,0 +1,145 @@
+page {
+  background: #f7f8fa;
+}
+.cancellation {
+  padding: 60px 32px 0;
+  height: 100vh;
+  &-icon {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+  }
+
+  &-header {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    &-title {
+      font-size: 40px;
+      font-family: PingFang SC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #333333;
+      line-height: 47px;
+    }
+    &-subtitle {
+      font-size: 24px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #999999;
+      line-height: 28px;
+      padding-top: 4px;
+    }
+  }
+  &-body {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    .cancellation-cell-items {
+      padding-bottom: 32px;
+    }
+    .cancellation-item {
+      font-size: 26px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #666666;
+      line-height: 30px;
+      padding-bottom: 20px;
+      text {
+        display: inline-block;
+        font-size: 14px;
+        padding-right: 2px;
+      }
+    }
+    .cancellation-item-desc {
+      padding-top: 32px;
+      font-size: 26px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #666666;
+      line-height: 30px;
+      border-top: 1px solid #e7e7e7;
+    }
+  }
+  &-footer {
+    padding-top: 60px;
+    text-align: center;
+    .cancellation-btn {
+      width: 100%;
+      height: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1c1c1e;
+      border-radius: 8px;
+      font-size: 30px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #ffffff;
+    }
+    .cancellation-btn-cancel {
+      font-size: 28px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #1c1c1e;
+      line-height: 33px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .cancellation-btn-desc {
+      font-size: 24px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #999999;
+      line-height: 28px;
+      padding-top: 10px;
+    }
+  }
+}
+.cancellation-popup {
+  width: 550px;
+  .cancellation-again-tips {
+    padding-top: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 26px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+  }
+  &-title {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-family: PingFang SC-Semibold, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    line-height: 35px;
+    padding-top: 28px;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px auto 16px;
+    .cancellation-btn {
+      width: 200px;
+      height: 68px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1c1c1e;
+      font-family: PingFang SC-Medium, PingFang SC;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 500;
+      border-radius: 44px;
+    }
+    .cancellation-cancel {
+      background-color: #ffffff;
+      border: 1px solid #dedede;
+      color: #333333;
+      margin-left: 20px;
+    }
+  }
+}

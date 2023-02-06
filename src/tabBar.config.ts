@@ -6,13 +6,13 @@ const tabBarConfig = {
   list: [
     {
       text: '首页',
-      pagePath: 'pages/home/index',
+      pagePath: 'tabBar/home/index',
       iconPath: 'assets/tab-bar/home-icon.png',
       selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
     },
     {
       text: '我的',
-      pagePath: 'pages/mine/index',
+      pagePath: 'tabBar/mine/index',
       iconPath: 'assets/tab-bar/mine-icon.png',
       selectedIconPath: 'assets/tab-bar/mine-selected-icon.png'
     }

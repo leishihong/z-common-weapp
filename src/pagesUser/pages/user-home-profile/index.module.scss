@@ -1,0 +1,36 @@
+page {
+  --page-bg: 'https://s1.ax1x.com/2022/10/27/xhZIzj.png';
+  background-color: #f7f8fa;
+}
+.mine-settings {
+  margin-left: 32px;
+}
+.mine-page {
+  background: #f7f8fa url(https://s1.ax1x.com/2022/10/27/xhZIzj.png) 0 0/100% 908px no-repeat;
+  padding-bottom: 60px;
+  .custom-center {
+    margin-top: 56px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 24px;
+    background: #2c2c2e;
+    box-shadow: 0px 8px 8px 0px rgba(4, 3, 14, 0.25);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px 24px 40px;
+    &-left {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-family: PingFang SC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 33px;
+      .custom-center-text {
+        padding-left: 16px;
+      }
+    }
+  }
+}

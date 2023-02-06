@@ -1,0 +1,37 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  height: 108px;
+  box-shadow: 0px -12px 24px -10px rgba(0, 0, 0, 0.06);
+  padding-bottom: env(safe-area-inset-bottom);
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+  &-item {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 24px;
+
+    &-icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    &-text {
+      font-size: 20px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      padding-bottom: 6px;
+    }
+  }
+}

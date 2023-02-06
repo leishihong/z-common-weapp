@@ -1,0 +1,120 @@
+page {
+  background: #f7f8fa;
+}
+.system-settings {
+  padding: 32px;
+  padding-bottom: calc(120px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(120px + env(safe-area-inset-bottom));
+  .cell-group {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 32px;
+    .community-apply {
+      font-size: 28px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #999999;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: right;
+      &-status {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      &-failed {
+        background: #f03b56;
+      }
+      &-pending {
+        background: #ffc83a;
+      }
+    }
+    .cell-button {
+      border: none;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      text-align: left;
+      background-color: transparent;
+      position: static;
+      border-radius: 0;
+      line-height: 1.5;
+      color: #323233;
+      &::after {
+        display: none;
+      }
+      &:last-child {
+        .cell::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f8fa;
+    &-wrapper {
+      padding-top: 20px;
+    }
+    .logout-btn {
+      width: 568px;
+      height: 86px;
+      background: #1c1c1e;
+      border-radius: 16px;
+      font-size: 28px;
+      font-family: PingFang SC-Semibold, PingFang SC;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+.custom-content {
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 26px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  padding-bottom: 20px;
+  .custom-email {
+    color: #333333;
+  }
+}
+.custom-btn {
+  width: 468px;
+  height: 86px;
+  background: #1c1c1e;
+  border-radius: 16px;
+  font-size: 28px;
+  font-family: PingFang SC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.popup-qrcode-content {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 400px;
+  height: 400px;
+  image {
+    width: 100%;
+    height: 100%;
+  }
+}

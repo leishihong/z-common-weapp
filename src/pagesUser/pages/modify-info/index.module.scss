@@ -1,0 +1,100 @@
+page {
+  background: #f7f8fa;
+}
+
+.modify-info-page {
+  background: #f7f8fa url(https://s1.ax1x.com/2022/10/27/xhZIzj.png) 0 0/100% 908px no-repeat;
+  padding-bottom: calc(160px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(160px + env(safe-area-inset-bottom));
+  .modify-info-space {
+    height: 400px;
+  }
+  .modify-info-top {
+    position: relative;
+    min-height: 510px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 510px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f7f8fa 100%);
+    }
+  }
+  .modify-info-body {
+    margin-top: -516px;
+    .modify-cover-wrap {
+      margin-right: 32px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      position: relative;
+      .modify-cover-image {
+        border-radius: 16px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 12px 24px;
+        font-size: 22px;
+        font-family: PingFang SC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 26px;
+      }
+    }
+  }
+  .cell-group {
+    margin-left: 32px;
+    margin-right: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: #ffffff;
+    border-radius: 24px;
+    position: relative;
+
+    .cell-avatar-btn {
+      text-align: inherit;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      line-height: 1.5;
+      background-color: transparent;
+      &::after {
+        display: none;
+      }
+    }
+    .cell-value {
+      display: flex;
+      align-items: flex-end;
+    }
+    .cell-avatar {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+}
+.footer-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0px -16px 24px -12px rgba(0, 0, 0, 0.15);
+  .footer-btn {
+    margin: 20px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    background: #1c1c1e;
+    border-radius: 8px;
+    font-size: 30px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
