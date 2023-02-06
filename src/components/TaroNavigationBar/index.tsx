@@ -1,4 +1,4 @@
-import React, { FC, memo, useMemo, useEffect, useState, CSSProperties, useCallback } from 'react';
+import React, { FC, memo, useMemo, useEffect, useState, CSSProperties, useCallback, ReactNode } from 'react';
 import { View, Text, Block } from '@tarojs/components';
 import Taro, { useReady, usePageScroll } from '@tarojs/taro';
 import cls from 'classnames';
@@ -194,7 +194,7 @@ const TaroNavigationBar: FC<NavigationBarProps> = (props) => {
   }, [basicInfo.showBack, basicInfo.showGoHome, back, home, iconTheme, renderLeft, onHome, onBack]);
 
   const renderNavCenter = useMemo(() => {
-    let nav_bar__center: unknown = null;
+    let nav_bar__center: ReactNode = null;
     if (title) {
       nav_bar__center = <Text>{title}</Text>;
     } else if (searchBar) {
