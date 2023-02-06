@@ -17,5 +17,12 @@ export default defineAppConfig({
     //   desc: '基于用户地理位置获得附近社团，同城活动推荐'
     // }
   },
-  tabBar: tabBarConfig
+  tabBar: tabBarConfig,
+  subPackages: [
+    {
+      root: 'pagesUser',
+      name: 'pagesUser',
+      pages: ['pages/login/index', 'pages/code-login/index', 'pages/system-settings/index', 'pages/modify-info/index']
+    }
+  ]
 });

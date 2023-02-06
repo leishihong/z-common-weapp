@@ -1,0 +1,68 @@
+@import 'styles/hairline.scss';
+
+.u-cell {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 34px 0;
+  line-height: 38px;
+  overflow: hidden;
+
+  &::after {
+    @include hairline-bottom();
+  }
+  // &:last-child::after,
+  &--borderLess::after {
+    display: none;
+  }
+
+  &__left {
+    flex: 1;
+
+    &-title {
+      font-size: 28px;
+      font-family: PingFang SC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #333333;
+      line-height: 38px;
+    }
+  }
+  &__value {
+    flex: 2;
+    // max-width: 530px;
+    font-size: 28px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #333333;
+    text-align: right;
+    align-items: flex-end;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__value-placeholder {
+    color: #999999;
+  }
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-wrap {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .u-cell__right-icon {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  &--centered {
+    align-items: center;
+  }
+}

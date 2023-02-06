@@ -1,4 +1,4 @@
-import { FC, memo, useMemo, useEffect, useRef, useCallback, Fragment } from 'react';
+import React, { FC, memo, useMemo, useEffect, useRef, useCallback, Fragment } from 'react';
 import Taro, { switchTab, getSystemInfoSync } from '@tarojs/taro';
 import { CoverView, CoverImage } from '@tarojs/components';
 import { useSelector, useDispatch } from 'react-redux';

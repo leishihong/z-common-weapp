@@ -1,27 +1,17 @@
-import { FC, memo, useCallback, useEffect, useState, useMemo, ReactNode } from 'react';
+import React, { FC, memo, useCallback, useEffect, useState, useMemo, ReactNode } from 'react';
 import { View, Button, Block, Text, Image } from '@tarojs/components';
 import Taro, { showModal, showToast, exitMiniProgram, useDidShow } from '@tarojs/taro';
 import { useSelector, useDispatch } from 'react-redux';
 import cls from 'classnames';
-import { isEmpty } from 'lodash';
 
-import { TAB, URL , formatWebUrl } from 'constants/router';
-import { Avatar, UCell, Popup } from 'components/index';
-import { jumpWebview, stringifyQuery } from 'utils/utils';
+import { TAB, URL, formatWebUrl } from 'constants/router';
+import { UCell } from 'components/index';
+import { jumpWebview } from 'utils/utils';
 import { handleUpdate } from 'utils/taroUpdateManager';
-
-import { fetchUserCommunityApplyInfo } from 'api/circle-community';
 
 import IconQrcodePublicAccount from '../../assets/icon-qrcode-public-account.jpg';
 
 import cx from './index.module.scss';
-
-interface ICommunityApply {
-  applyDesc: string;
-  communityName: string;
-  applyId: unknown;
-  applyStatus: '0' | '1' | '2' | string;
-}
 
 interface IPopupInfo {
   title: string;
@@ -30,11 +20,6 @@ interface IPopupInfo {
   type: 'qrcode' | 'email' | string;
 }
 
-const applyStatusText: { [key: string]: string } = {
-  0: '申请中',
-  1: '',
-  2: '未通过'
-};
 const SystemSettings: FC = () => {
   const { globalsState, mineState } = useSelector(({ globalsState, mineState }) => ({ globalsState, mineState }));
   const {
@@ -43,33 +28,12 @@ const SystemSettings: FC = () => {
   } = useMemo(() => globalsState, [globalsState]);
   const { isCommunity } = useMemo(() => mineState, [mineState]);
   const dispatch = useDispatch();
-  const [communityApplyInfo, setCommunityApplyInfo] = useState<ICommunityApply>({
-    applyDesc: '',
-    communityName: '',
-    applyStatus: '',
-    applyId: ''
-  });
   const [popupInfo, setPopupInfo] = useState<IPopupInfo>({
     title: '',
     isVisible: false,
     footer: null,
     type: ''
   });
-  useDidShow(() => {
-    queryCommunityApplyStatus();
-  });
-  useEffect(() => {
-    console.log(storageInfoSync, 'getStorageInfoSync');
-  }, []);
-  // 查询社团认证信息
-  const queryCommunityApplyStatus = async () => {
-    try {
-      const { status, data } = await fetchUserCommunityApplyInfo();
-      if (status === 200) {
-        setCommunityApplyInfo(data);
-      }
-    } catch (error) {}
-  };
 
   const handleLogout = useCallback(() => {
     showModal({
@@ -168,37 +132,6 @@ const SystemSettings: FC = () => {
     });
   }, []);
 
-  const renderCommunityApply = useMemo(() => {
-    const { applyStatus, communityName, applyId } = communityApplyInfo;
-    if (isEmpty(applyStatus))
-      return (
-        <View className={cx['community-apply']} onClick={() => handleCommunityApply('applyCertification', { applyId })}>
-          未认证
-        </View>
-      );
-    if (['0', '2'].includes(applyStatus)) {
-      return (
-        <View
-          className={cls(cx['community-apply'])}
-          onClick={() => handleCommunityApply('certificationAuditResults', { applyId })}
-        >
-          <div
-            className={cls(
-              cx['community-apply-status'],
-              cx[`community-apply-${applyStatus == '2' ? 'failed' : 'pending'}`]
-            )}
-          ></div>
-          {applyStatusText[applyStatus]}
-        </View>
-      );
-    }
-    return (
-      <View className={cx['community-apply']} onClick={() => handleCommunityApply('communityCertification')}>
-        {communityName}
-      </View>
-    );
-  }, [communityApplyInfo]);
-
   const handleCustomClick = useCallback((type: string) => {
     setPopupInfo({
       title: type === 'email' ? '邮箱地址' : '关注公众号',
@@ -240,9 +173,6 @@ const SystemSettings: FC = () => {
       <View className={cx['system-settings']}>
         <View className={cx['cell-group']}>
           <UCell title='资料修改' onClickPress={() => handleClick('modify-info')} />
-          <UCell title='社团认证' bordered={isCommunity}>
-            {renderCommunityApply}
-          </UCell>
           {/* 只有是社团才开启功能 */}
           {isCommunity && (
             <Block>
@@ -254,8 +184,7 @@ const SystemSettings: FC = () => {
         <View className={cx['cell-group']}>
           <UCell title='联系客服' onClickPress={() => handleCustomClick('email')} />
           <UCell title='关注公众号' onClickPress={() => handleCustomClick('qrcode')} />
-          <UCell title='隐私政策' onClickPress={() => handleGoWebview('privacyPolicy', false)} />
-          <UCell title='用户协议' onClickPress={() => handleGoWebview('userAgreement', false)} />
+          <UCell title='用户协议' onClickPress={() => handleGoWebview('privacyPolicy', false)} />
           <UCell
             title='清除缓存'
             placeholder={`${storageInfoSync.currentSize}KB`}
@@ -285,7 +214,7 @@ const SystemSettings: FC = () => {
           </View>
         </View>
       </View>
-      {popupInfo.isVisible && (
+      {/* {popupInfo.isVisible && (
         <Popup
           visible={popupInfo.isVisible}
           title={popupInfo.title}
@@ -295,7 +224,7 @@ const SystemSettings: FC = () => {
         >
           {renderPopupContent}
         </Popup>
-      )}
+      )} */}
     </Block>
   );
 };
