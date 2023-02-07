@@ -3,25 +3,15 @@
  */
 export const URL: { [key: string]: string } = {
   'system-settings': '/pagesUser/pages/system-settings/index',
-  'modify-info': '/pagesUser/pages/modify-info/index',
   login: '/pagesUser/pages/login/index',
   'code-login': '/pagesUser/pages/code-login/index',
-  'modify-circle-label': '/pagesUser/pages/modify-circle-label/index',
-  'modify-circle-tag-skills': '/pagesUser/pages/modify-circle-tag-skills/index',
-  'cropper-image': '/pagesUser/pages/cropper-image/index',
   cancellation: '/pagesUser/pages/cancellation/index',
   'scan-code': '/pagesWriteOff/pages/scan-code-write-off/index',
   'user-home-profile': '/pagesUser/pages/user-home-profile/index',
 
-  'circle-detail': '/pagesCircleGroup/pages/circle-detail/index',
   'community-detail': '/pagesCircleGroup/pages/community-detail/index',
-  'blogger-detail': '/pagesCircleGroup/pages/blogger-detail/index',
 
-  'activity-square': '/pagesActivity/pages/activity-square/index',
-  'brand-consult': '/pagesActivity/pages/brand-consult/index',
   'activity-detail': '/pagesActivity/pages/activity-detail/index',
-  'organize-list': '/pagesActivity/pages/organize-list/index',
-  'capsule-activity': '/pagesActivity/pages/capsule-activity/index',
 
   webview: '/pagesWebview/pages/webview/index',
   404: '/pagesNotfound/pages/404/index',
@@ -31,10 +21,9 @@ export const URL: { [key: string]: string } = {
  * @description TabBar路由
  */
 export const TAB = {
-  circle: '/pages/circle/index',
-  'social-activity': '/pages/social-activity/index',
-  follow: '/pages/follow/index',
-  blogger: '/pages/blogger/index',
+  home: '/pages/home/index',
+  community: '/pages/community/index',
+  activity: '/pages/activity/index',
   mine: '/pages/mine/index'
 };
 /**

@@ -1,4 +1,4 @@
-import { fetchVxAppletsLogin, fetchUserLogin, fetchVxAppletsMobile } from 'api/login';
+import { fetchVxAppletsLogin, fetchUserLogin, fetchVxAppletsMobile } from 'api/indx';
 import Taro from '@tarojs/taro';
 import logger from 'utils/logger';
 import { jumpCallback } from 'utils/utils';

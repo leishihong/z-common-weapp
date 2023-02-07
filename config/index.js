@@ -1,7 +1,7 @@
 // const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 // import TerserPlugin from 'terser-webpack-plugin';
 const { resolve } = require('path');
-const pkg = require('../package.json')
+const pkg = require('../package.json');
 const pathResolve = (fileName) => resolve(__dirname, '..', fileName);
 
 const config = {
@@ -24,13 +24,11 @@ const config = {
     CUSTOM_EMAIL: JSON.stringify('kkdxxh@mytaste.ntesmail.com') // 客服邮箱
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
-  compiler: 'webpack5',
+  compiler: 'webpack4',
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
@@ -47,7 +45,7 @@ const config = {
     hooks: pathResolve('src/hooks'),
     constants: pathResolve('src/constants')
   },
-  sass:{
+  sass: {
     data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`
   },
   mini: {
@@ -86,8 +84,7 @@ const config = {
       },
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -98,11 +95,11 @@ const config = {
       }
     }
   }
-}
+};
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require('./prod'));
+};

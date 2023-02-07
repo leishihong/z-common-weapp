@@ -6,13 +6,25 @@ const tabBarConfig = {
   list: [
     {
       text: '首页',
-      pagePath: 'tabBar/home/index',
+      pagePath: 'pages/home/index',
+      iconPath: 'assets/tab-bar/home-icon.png',
+      selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
+    },
+    {
+      text: '活动',
+      pagePath: 'pages/activity/index',
+      iconPath: 'assets/tab-bar/home-icon.png',
+      selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
+    },
+    {
+      text: '社团',
+      pagePath: 'pages/home/index',
       iconPath: 'assets/tab-bar/home-icon.png',
       selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
     },
     {
       text: '我的',
-      pagePath: 'tabBar/mine/index',
+      pagePath: 'pages/mine/index',
       iconPath: 'assets/tab-bar/mine-icon.png',
       selectedIconPath: 'assets/tab-bar/mine-selected-icon.png'
     }
