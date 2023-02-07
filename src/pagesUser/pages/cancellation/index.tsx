@@ -1,10 +1,10 @@
-import { useState, useEffect, FC, memo, useMemo, useCallback, useLayoutEffect, useRef } from 'react';
+import  React,{ useState, useEffect, FC, memo, useMemo, useCallback, useLayoutEffect, useRef } from 'react';
 import { View, Text, Block, Image } from '@tarojs/components';
 import Taro, { showModal, showToast, useRouter } from '@tarojs/taro';
 import { useSelector, useDispatch } from 'react-redux';
 import cls from 'classnames';
-import { Popup } from 'components/index';
-import { fetchCancellationUser } from 'api/user-info';
+// import { Popup } from 'components/index';
+import { fetchCancellationUser } from 'api/index';
 import { TAB, URL } from 'constants/router';
 import IconCancellation from '../../assets/icon-cancellation.png';
 
@@ -110,7 +110,7 @@ const AccountCancellation: FC = () => {
           <View className={cx['cancellation-btn-desc']}>点击申请注销即表示已经清楚注销账号后果</View>
         </View>
       </View>
-      <Popup
+      {/* <Popup
         visible={cancellationVisible}
         rootCls={cx['cancellation-popup']}
         customTitle={<View className={cx['cancellation-popup-title']}>请您谨慎操作</View>}
@@ -128,7 +128,7 @@ const AccountCancellation: FC = () => {
         <View className={cx['cancellation-again-tips']}>
           您的账号即将注销，注销服务后，将无法继续使用任何热爱光年相关的服务，也将无法找回您与热爱光年相关的任何内容和信息
         </View>
-      </Popup>
+      </Popup> */}
     </Block>
   );
 };

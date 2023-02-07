@@ -1,4 +1,4 @@
-import { FC, memo, useCallback, useState, useMemo, ReactNode } from 'react';
+import React,{ FC, memo, useCallback, useState, useMemo, ReactNode } from 'react';
 import { View, Block } from '@tarojs/components';
 import cls from 'classnames';
 

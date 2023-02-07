@@ -1,12 +1,14 @@
-import { FC, memo, useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import React, { FC, memo, useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import Taro from '@tarojs/taro';
 import { View, Label, Input, Button, Block } from '@tarojs/components';
 import cls from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
-import { Avatar, TaroNavigationBar } from 'components/index';
+import { TaroNavigationBar } from 'components/index';
 import { checkPhone, checkCode, checkTestPhone } from 'utils/validation';
-import { fetchVerifyCode } from 'api/login';
 import logger from 'utils/logger';
+
+import { fetchVerifyCode } from 'api/index';
+
 import Protocol from '../../components/Protocol';
 
 import cx from './index.module.scss';
@@ -115,18 +117,18 @@ const CodeLogin: FC = () => {
             <View className={cx['login-wrap-input']}>
               <Input
                 className={cx['login-input']}
-                type='number'
+                type="number"
                 value={phoneNumber}
                 ref={phoneRef}
                 focus
                 confirmHold
                 maxlength={11}
-                placeholder='请输入手机号'
+                placeholder="请输入手机号"
                 onInput={handlePhoneChange}
                 onBlur={handlePhoneBlur}
               />
               <View className={cx['login-right']}>
-                {phoneNumber && (
+                {/* {phoneNumber && (
                   <Avatar
                     src='https://s1.ax1x.com/2022/10/27/xfl9FP.png'
                     rootCls={cx['login-phone-clear']}
@@ -134,7 +136,7 @@ const CodeLogin: FC = () => {
                     size={26}
                     onAvatar={() => onClear('phoneNumber')}
                   />
-                )}
+                )} */}
                 <View
                   className={cls(cx['login-code-btn'], {
                     [cx['code-disabled']]: btnDisabled
@@ -150,14 +152,14 @@ const CodeLogin: FC = () => {
             <View className={cx['login-wrap-input']}>
               <Input
                 className={cx['login-input']}
-                type='number'
+                type="number"
                 value={verificationCode}
                 maxlength={6}
-                placeholder='请输入验证码'
+                placeholder="请输入验证码"
                 onInput={handleCodeChange}
               />
               <View className={cx['login-right']}>
-                {verificationCode && (
+                {/* {verificationCode && (
                   <Avatar
                     src='https://s1.ax1x.com/2022/10/27/xfl9FP.png'
                     rootCls={cx['login-code-clear']}
@@ -165,7 +167,7 @@ const CodeLogin: FC = () => {
                     size={26}
                     onAvatar={() => onClear('verificationCode')}
                   />
-                )}
+                )} */}
                 {btnDisabled && <View className={cx['count-down-timer']}>{time}</View>}
               </View>
             </View>
@@ -177,14 +179,14 @@ const CodeLogin: FC = () => {
             [cx['login-btn-disabled']]: !phoneValid || !codeValid
           })}
           onClick={handleSubmit}
-          formType='submit'
+          formType="submit"
         >
           登录
         </Button>
         <Protocol
           ref={protocolRef}
-          checkIcon='https://s1.ax1x.com/2022/10/27/xfa2rV.png'
-          unCheckedIcon='https://s1.ax1x.com/2022/10/26/xWIHIJ.png'
+          checkIcon="https://s1.ax1x.com/2022/10/27/xfa2rV.png"
+          unCheckedIcon="https://s1.ax1x.com/2022/10/26/xWIHIJ.png"
           protocolText={cx['protocol-text']}
           protocolUser={cx['protocol-user']}
           onClick={setIsAgreement}

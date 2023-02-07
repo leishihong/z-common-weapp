@@ -1,5 +1,5 @@
 const tabBarConfig = {
-  custom: true,
+  // custom: true,
   color: '#333333',
   selectedColor: '#0C0D0D',
   backgroundColor: '#fff',
@@ -18,7 +18,7 @@ const tabBarConfig = {
     },
     {
       text: '社团',
-      pagePath: 'pages/home/index',
+      pagePath: 'pages/community/index',
       iconPath: 'assets/tab-bar/home-icon.png',
       selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
     },

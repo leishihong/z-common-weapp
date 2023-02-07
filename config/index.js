@@ -37,7 +37,6 @@ const config = {
     components: pathResolve('src/components'),
     assets: pathResolve('src/assets'),
     pages: pathResolve('src/pages'),
-    views: pathResolve('src/views'),
     utils: pathResolve('src/utils'),
     store: pathResolve('src/store'),
     libs: pathResolve('src/libs'),
@@ -46,6 +45,11 @@ const config = {
     constants: pathResolve('src/constants')
   },
   sass: {
+    resource: [
+      pathResolve('src/styles/nutui-theme.scss'),
+      pathResolve('src/styles/ellipsis.scss'),
+      pathResolve('src/styles/hairline.scss')
+    ],
     data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`
   },
   mini: {

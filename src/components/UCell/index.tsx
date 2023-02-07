@@ -1,11 +1,11 @@
-import { FC, memo, CSSProperties, useCallback, ReactNode } from 'react';
+import React,{ FC, memo, CSSProperties, useCallback, ReactNode } from 'react';
 import { View, Text, Image } from '@tarojs/components';
 import cls from 'classnames';
 import ArrowRightIcon from 'assets/arrow-right-cell-icon.png';
 import cx from './index.module.scss';
 
 interface IProps {
-  title?: string | unknown;
+  title?: string | ReactNode;
   label?: string;
   rightIcon?: any;
   bordered?: boolean;

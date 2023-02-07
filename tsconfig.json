@@ -15,7 +15,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": ["node_modules/@types"],
@@ -29,8 +29,6 @@
       "store/*": ["./src/store/*"],
       "libs/*": ["./src/libs/*"],
       "pages/*": ["./src/pages/*"],
-      "views/*": ["./src/views/*"],
-      "tabBar/*": ["./src/tabBar/*"],
       "styles/*": ["./src/styles/*"],
       "constants/*": ["./src/constants/*"]
     }

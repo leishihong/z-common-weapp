@@ -8,3 +8,5 @@ export const fetchVerifyCode = (params): Promise<any> => post('user/sendMsgCode'
 export const fetchUserLogin = (params): Promise<any> => post('user/registerOrLogin', params);
 // 获取用户手机号
 export const fetchVxAppletsMobile = (params): Promise<any> => post('user/vxAppletsMobile', params);
+// 注销用户接口
+export const fetchCancellationUser = (params?: any) => post('user/cancellationUser', params);

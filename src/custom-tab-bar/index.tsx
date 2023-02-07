@@ -1,6 +1,6 @@
 import React, { FC, memo, useMemo, useEffect, useRef, useCallback, Fragment } from 'react';
 import Taro, { switchTab, getSystemInfoSync } from '@tarojs/taro';
-import { CoverView, CoverImage } from '@tarojs/components';
+import { View, Image } from '@tarojs/components';
 import { useSelector, useDispatch } from 'react-redux';
 import cls from 'classnames';
 import { getSystemInfo } from 'utils/getSystemInfo';
@@ -36,33 +36,33 @@ const CustomTabBar: FC = () => {
 
   const renderTabBar = useMemo(() => {
     return (
-      <CoverView className={cls(cx['tab-bar'], 'tabBarRect')}>
-        <CoverView id='tab-bar-wrap' className={cx['tab-bar-wrap']}>
+      <View className={cls(cx['tab-bar'], 'tabBarRect')}>
+        <View id='tab-bar-wrap' className={cx['tab-bar-wrap']}>
           {tabList.map((item, index) => {
             return (
-              <CoverView
+              <View
                 className={cx['tab-bar-item']}
                 onClick={() => onSwitchTab(item, index)}
                 data-path={item.pagePath}
                 key={item.pagePath}
               >
-                <CoverImage
+                <Image
                   className={cx['tab-bar-item-icon']}
                   src={selectedIndex === index ? item.selectedIconPath : item.iconPath}
                 />
-                <CoverView
-                  className={cx['tab-bar-item-text']}
+                <View
+                  className={cx['tab-bar-item-title']}
                   style={{
                     color: selectedIndex === index ? selectedColor : color
                   }}
                 >
                   {item.text}
-                </CoverView>
-              </CoverView>
+                </View>
+              </View>
             );
           })}
-        </CoverView>
-      </CoverView>
+        </View>
+      </View>
     );
   }, [selectedIndex]);
 

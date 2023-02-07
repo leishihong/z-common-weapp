@@ -7,7 +7,7 @@ import { handleUpdate } from 'utils/taroUpdateManager';
 import { getSystemInfo } from 'utils/getSystemInfo';
 import { inWeApp } from 'utils/base';
 
-import './app.scss';
+// import './app.scss';
 
 const App: FC<PropsWithChildren> = ({ children }) => {
   const { tabBarState, globalsState } = store.getState();

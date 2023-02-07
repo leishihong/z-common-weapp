@@ -1,8 +1,8 @@
-import { fetchVxAppletsLogin, fetchUserLogin, fetchVxAppletsMobile } from 'api/indx';
 import Taro from '@tarojs/taro';
 import logger from 'utils/logger';
 import { jumpCallback } from 'utils/utils';
 import { TAB } from 'constants/router';
+import { fetchVxAppletsLogin, fetchUserLogin, fetchVxAppletsMobile } from 'api/index';
 
 export default {
   namespace: 'loginState',

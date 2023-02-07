@@ -1,17 +1,28 @@
-import { useState, useEffect, useLayoutEffect, FC, memo, useMemo, useCallback, lazy, Suspense, useRef } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  FC,
+  memo,
+  useMemo,
+  useCallback,
+  lazy,
+  Suspense,
+  useRef
+} from 'react';
 import { View, Button, Text, Block, Video, MovableArea } from '@tarojs/components';
 import Taro, { useRouter } from '@tarojs/taro';
 import { useSelector, useDispatch } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
 import cls from 'classnames';
 import { TAB, URL, formatWebUrl } from 'constants/router';
-import { Avatar, TaroNavigationBar } from 'components/index';
+import { TaroNavigationBar } from 'components/index';
 import { getStorage, jumpWebview } from 'utils/utils';
 import Protocol from '../../components/Protocol';
 
 import cx from './index.module.scss';
 
-const Popup = lazy(() => import('components/Popup'));
+// const Popup = lazy(() => import('components/Popup'));
 
 const Login: FC<any> = () => {
   const router = useRouter();
@@ -139,22 +150,22 @@ const Login: FC<any> = () => {
 
   return (
     <Block>
-      <TaroNavigationBar back home isImmersive background='transparent' />
-      <MovableArea style='width:100%;'>
+      <TaroNavigationBar back home isImmersive background="transparent" />
+      <MovableArea style="width:100%;">
         <Video
-          src='https://img.mtaste.cn/prod/video/system/config/4cbe5686-2eb5-4348-9c33-28ec7490f86b.mp4'
-          poster='https://img.mtaste.cn/prod/video/system/config/53923894-b19b-43b7-b55d-9f6dc7c99b19.jpg'
+          src="https://img.mtaste.cn/prod/video/system/config/4cbe5686-2eb5-4348-9c33-28ec7490f86b.mp4"
+          poster="https://img.mtaste.cn/prod/video/system/config/53923894-b19b-43b7-b55d-9f6dc7c99b19.jpg"
           autoplay
           muted
           loop
-          objectFit='cover'
+          objectFit="cover"
           initialTime={0}
           enableProgressGesture={false}
           showPlayBtn={false}
           showProgress={false}
           showFullscreenBtn={false}
           showCenterPlayBtn={false}
-          style='height:100vh;width:100%;'
+          style="height:100vh;width:100%;"
         ></Video>
       </MovableArea>
       <View className={cx['z-login-page']}>
@@ -196,17 +207,17 @@ const Login: FC<any> = () => {
           </View>
           <View className={cx['login-other']}>
             <Text className={cx['login-other-text']}>其他手机号登录</Text>
-            <Avatar
+            {/* <Avatar
               src='https://s1.ax1x.com/2022/12/23/zja9E9.png'
               rootCls={cx['login-other-icon']}
               shape='rounded'
               onAvatar={handleGoPhoneLogin}
               size={76}
-            />
+            /> */}
           </View>
           <Protocol ref={(ref) => (protocolRef.current = ref)} onClick={(e) => setIsAgreement(e)} />
         </View>
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <Popup
             visible={isVisible}
             rounded
@@ -239,7 +250,7 @@ const Login: FC<any> = () => {
               </View>
             </View>
           </Popup>
-        </Suspense>
+        </Suspense> */}
       </View>
     </Block>
   );
