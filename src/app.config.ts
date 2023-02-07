@@ -2,11 +2,17 @@ const tabBarConfig = require('./tabBar.config');
 
 export default defineAppConfig({
   lazyCodeLoading: 'requiredComponents',
-  pages: ['pages/home/index', 'pages/activity/index', 'pages/mine/index', 'pages/community/index', 'pages/land/index'],
+  pages: [
+    'pages/home-page/index',
+    'pages/activity/index',
+    'pages/community/index',
+    'pages/mine/index',
+    // 'pages/land/index'
+  ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
+    navigationBarTitleText: '',
     navigationBarTextStyle: 'black'
   },
   permission: {

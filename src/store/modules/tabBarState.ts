@@ -8,7 +8,7 @@ export default {
       {
         text: '首页',
         pageName: 'home',
-        pagePath: '/pages/home/index',
+        pagePath: '/pages/home-page/index',
         iconPath: '/assets/tab-bar/home-icon.png',
         selectedIconPath: '/assets/tab-bar/home-selected-icon.png'
       },

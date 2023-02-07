@@ -40,18 +40,7 @@
     ],
     "include": []
   },
-  "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "首页",
-          "pathName": "tabBar/home/index",
-          "query": "",
-          "scene": null
-        }
-      ]
-    }
-  },
+  "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2

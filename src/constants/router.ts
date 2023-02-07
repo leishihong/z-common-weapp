@@ -21,7 +21,7 @@ export const URL: { [key: string]: string } = {
  * @description TabBar路由
  */
 export const TAB = {
-  home: '/pages/home/index',
+  home: '/pages/home-page/index',
   community: '/pages/community/index',
   activity: '/pages/activity/index',
   mine: '/pages/mine/index'

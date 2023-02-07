@@ -1,12 +1,12 @@
 const tabBarConfig = {
-  // custom: true,
+  custom: true,
   color: '#333333',
   selectedColor: '#0C0D0D',
   backgroundColor: '#fff',
   list: [
     {
       text: '首页',
-      pagePath: 'pages/home/index',
+      pagePath: 'pages/home-page/index',
       iconPath: 'assets/tab-bar/home-icon.png',
       selectedIconPath: 'assets/tab-bar/home-selected-icon.png'
     },
